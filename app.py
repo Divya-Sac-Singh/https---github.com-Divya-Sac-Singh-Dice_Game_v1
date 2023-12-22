@@ -13,13 +13,12 @@ class DiceGame:
         self.players = {}
         self.player_choices = {'Play': {}, 'Quit': {}}
 
-    # ... (Keep the existing DiceGame class as it is)
 
 @app.route('/')
 def home():
     return render_template('home.html')
 
-# ... (Previous code remains the same)
+
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
@@ -50,8 +49,7 @@ def admin_menu():
 
     return render_template('admin_menu.html', players=game.players, choices=game.player_choices)
 
-# ... (Previous code remains the same)
-# ... (Previous code remains the same)
+
 
 @app.route('/admin/view_all_players')
 def view_all_players():
@@ -89,11 +87,7 @@ def update_player():
 def logout():
     return redirect(url_for('home'))
 
-# ... (Previous code remains the same)
 
-
-# Add more routes for other pages as needed
-# ... (Previous code remains the same)
 
 @app.route('/player', methods=['GET', 'POST'])
 def player():
